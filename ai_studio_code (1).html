@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>UncedoAI | Financial Trust for Spaza Shops</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    
+    <style>
+      /* UncedoAI Brand Gradient */
+      .gradient {
+        background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .nav-link {
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .brand-logo, #header {
+        transition: all 0.4s ease;
+      }
+
+      /* Enhanced Styling for the specific Spaza Shop image */
+      .spaza-img-container {
+        position: relative;
+        max-height: 500px;
+        overflow: hidden;
+        border-radius: 1.5rem;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      }
+
+      .spaza-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%; /* Focus on the shopkeeper's face */
+      }
+    </style>
+  </head>
+
+  <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+    
+    <!-- Navigation -->
+    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+        <div class="pl-4 flex items-center">
+          <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl brand-logo" href="#">
+            UNCEDO AI
+          </a>
+        </div>
+        
+        <div class="block lg:hidden pr-4">
+          <button id="nav-toggle" class="flex items-center p-1 text-blue-300 hover:text-white focus:outline-none focus:shadow-outline">
+            <svg class="fill-current h-6 w-6" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
+          </button>
+        </div>
+
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3">
+              <a class="nav-link inline-block py-2 px-4 text-blue-300 font-bold no-underline hover:text-white" href="#about">About</a>
+            </li>
+            <li class="mr-3">
+              <a class="nav-link inline-block text-blue-300 font-bold no-underline hover:text-white py-2 px-4" href="#features">Features</a>
+            </li>
+            <li class="mr-3">
+              <a class="nav-link inline-block text-blue-300 font-bold no-underline hover:text-white py-2 px-4" href="#how-it-works">How It Works</a>
+            </li>
+          </ul>
+          <button id="navAction" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 transform transition hover:scale-105 duration-300 ease-in-out">
+            Get Started
+          </button>
+        </div>
+      </div>
+      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="pt-32 pb-12">
+      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+          <p class="uppercase tracking-loose w-full text-blue-200">The Future of Informal Finance</p>
+          <h1 class="my-4 text-5xl font-bold leading-tight">Turning Daily Transactions into Financial Trust</h1>
+          <p class="leading-normal text-2xl mb-8">Empowering local entrepreneurs with a verifiable business identity using AI and WhatsApp.</p>
+          <div class="flex flex-col sm:flex-row gap-4 w-full justify-center md:justify-start">
+            <button class="bg-white text-gray-800 font-bold rounded-full py-4 px-8 shadow-lg transform transition hover:scale-105">Register Business</button>
+            <a href="https://wa.me/27123456789" class="bg-green-500 text-white font-bold rounded-full py-4 px-8 shadow-lg flex items-center justify-center hover:scale-105 transition">
+                <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                WhatsApp Us
+            </a>
+          </div>
+        </div>
+        <div class="w-full md:w-3/5 py-6 text-center">
+          <img class="w-full md:w-4/5 z-50 inline-block" src="https://cdni.iconscout.com/illustration/premium/thumb/financial-growth-6333618-5230173.png" alt="Fintech Graph" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="relative -mt-12 lg:-mt-24">
+      <svg viewBox="0 0 1428 174" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,164.708498 C91.3333333,164.708498 190.333333,164.708498 297,164.708498 C422.671852,164.708498 529.184306,155.603588 616.537367,137.40411 C717.957305,116.291344 834.812403,92.4519978 967.052834,65.8818891 C1131.31945,33.0772099 1287.70333,32.4208444 1436.10447,63.9213583 L1436.10447,204 L0,204 L0,164.708498 Z" fill="white"/></svg>
+    </div>
+
+    <!-- Bridging the Gap (About Section) -->
+    <section class="bg-white border-b py-16" id="about">
+      <div class="container max-w-5xl mx-auto m-8">
+        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Bridging the Gap</h1>
+        <div class="w-full mb-12"><div class="h-1 mx-auto gradient w-64 opacity-25 rounded-t"></div></div>
+        
+        <div class="flex flex-wrap items-center">
+          <div class="w-5/6 sm:w-1/2 p-6">
+            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">The Invisible Economy</h3>
+            <p class="text-gray-600 mb-8 text-lg">
+              Millions of informal entrepreneurs run profitable businesses but remain "invisible" to banks. Because they trade in cash and lack formal records, they are locked out of credit and growth opportunities.
+              <br /><br />
+              <strong>UncedoAI</strong> provides the tools to convert daily logs into a digital footprint that lenders can trust.
+            </p>
+          </div>
+          <!-- PHOTO UPDATED HERE -->
+          <div class="w-full sm:w-1/2 p-6">
+            <div class="spaza-img-container">
+                <img class="spaza-img" 
+                     src="https://i0.wp.com/www.souloffinance.com/wp-content/uploads/2020/05/Spaza-Shop.jpg?resize=768%2C1024&ssl=1" 
+                     alt="Local Spaza Shop Entrepreneur" />
+            </div>
+            <p class="text-gray-400 text-xs mt-4 italic text-center">Digitizing trust for local heroes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="bg-gray-100 py-16" id="features">
+      <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center">Growth Features</h1>
+        <div class="w-full mb-12"><div class="h-1 mx-auto gradient w-64 opacity-25 rounded-t"></div></div>
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow">
+            <div class="flex-1 bg-white rounded-xl shadow-lg p-8 transform transition hover:scale-105">
+              <div class="text-blue-600 font-bold text-xl mb-4">Transaction Logging</div>
+              <p class="text-gray-600">Record every sale instantly. Our AI handles the bookkeeping so you can focus on customers.</p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow">
+            <div class="flex-1 bg-white rounded-xl shadow-lg p-8 transform transition hover:scale-105">
+              <div class="text-blue-600 font-bold text-xl mb-4">Reputation Score</div>
+              <p class="text-gray-600">We build your credit profile based on real business activity, not just traditional bank history.</p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow">
+            <div class="flex-1 bg-white rounded-xl shadow-lg p-8 transform transition hover:scale-105">
+              <div class="text-blue-600 font-bold text-xl mb-4">WhatsApp AI Bot</div>
+              <p class="text-gray-600">No apps needed. Use WhatsApp to log sales in your local language; we'll do the rest.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-gray-600 py-12">
+        <div class="container mx-auto px-8 text-center">
+            <p class="font-bold text-2xl text-blue-600 tracking-tighter">UNCEDO AI</p>
+            <p class="mt-4 text-sm">© 2024 Buildathon Hackathon. Powering the Informal Economy.</p>
+        </div>
+    </footer>
+
+    <!-- Logic for Dynamic Colors -->
+    <script>
+      var header = document.getElementById("header");
+      var brandLogo = document.querySelector(".brand-logo");
+      var navaction = document.getElementById("navAction");
+      var navLinks = document.querySelectorAll(".nav-link");
+
+      window.addEventListener("scroll", function () {
+        var scrollpos = window.scrollY;
+
+        if (scrollpos > 20) {
+          header.classList.add("bg-white", "shadow-md");
+          header.classList.remove("text-white");
+          brandLogo.classList.add("text-blue-600");
+          brandLogo.classList.remove("text-white");
+          navaction.classList.remove("bg-white", "text-gray-800");
+          navaction.classList.add("gradient", "text-white");
+          
+          navLinks.forEach(link => {
+            link.classList.remove("text-blue-300");
+            link.classList.add("text-blue-600");
+          })
